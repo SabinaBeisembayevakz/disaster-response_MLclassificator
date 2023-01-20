@@ -59,5 +59,14 @@ This project is part of Udacity nanodegree program
 
 SCREENSHOTS
 
+You need to write disaster message and click 'classify message':
+
 ![image](https://user-images.githubusercontent.com/120465527/213779570-61d8de4f-00ba-4a6f-8eaf-f39ec9a596a7.png)
 
+and see results:
+
+![image](https://user-images.githubusercontent.com/120465527/213779932-9f41131b-1075-4ca9-b49e-cd5767d2473b.png)
+
+Additionally, you can see some graphs describing data:
+
+<img width="1194" alt="image" src="https://user-images.githubusercontent.com/120465527/213780331-aec99c00-bcd2-4462-a9b9-49ccbabf5072.png">
