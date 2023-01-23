@@ -19,6 +19,9 @@ from sklearn.ensemble import AdaBoostClassifier
 from sklearn.model_selection import GridSearchCV
 import pickle
 import sys
+from nltk.corpus import stopwords
+from nltk.tokenize import RegexpTokenizer
+nltk.download('stopwords')
 
 
 def load_data(database_filepath):
@@ -35,19 +38,25 @@ def load_data(database_filepath):
 
 def tokenize(text):
     """
-    tokenizes text
+    tokenizes, normalizes, lemmatizes text
     """
     url_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
     detected_urls = re.findall(url_regex, text)
     for url in detected_urls:
         text = text.replace(url, "urlplaceholder")
 
-    tokens = word_tokenize(text)
+    tokenizer = RegexpTokenizer(r'\w+')
+    tokens_np = tokenizer.tokenize(text)
+    stop_words = set(stopwords.words('english'))
+    filtered_text = []
+    for w in tokens_np:
+        if w not in stop_words:
+            filtered_text.append(w)
     lemmatizer = WordNetLemmatizer()
 
     clean_tokens = []
-    for tok in tokens:
-        clean_tok = lemmatizer.lemmatize(tok).lower().strip()
+    for item in filtered_text:
+        clean_tok = lemmatizer.lemmatize(item).strip()
         clean_tokens.append(clean_tok)
     return clean_tokens
 
