@@ -20,7 +20,7 @@ sqlalchemy
 
 About project
 
-We used message about disaster to build ML model that classifies messages to specific categories in real time. Web app shows the result of the codes.
+We used disaster messages to build ML model that classifies messages to specific categories in real time. Web app shows the result of the codes.
 The screenshots of web app provided below.
 
 File Descriptions
