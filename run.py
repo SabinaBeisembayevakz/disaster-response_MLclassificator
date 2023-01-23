@@ -78,7 +78,7 @@ def index():
             ],
        
             'layout': {
-                'title': 'Distribution of Message categories',
+                'title': 'Distribution of Message Categories',
                 'yaxis': {
                     'title': "Count"
                 },
