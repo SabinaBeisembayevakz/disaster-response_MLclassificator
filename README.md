@@ -1,29 +1,16 @@
-# disaster-response
-
-
-Installations
+# Installations
 
 The code should run with no issues using Python versions 3.*. 
-Libraries used:
-pandas
-numpy
-nltk
-flask
-plotly
-json
-sklearn
-sys 
-re
-pickle
-sqlalchemy
+
+Download libraries by executing in your shell: pip install -r requirements.txt
 
 
-About project
+# About project
 
 We used disaster messages to build ML model that classifies messages to specific categories in real time. Web app shows the result of the codes.
 The screenshots of web app provided below.
 
-File Descriptions
+# File Descriptions
 
 - app
 | - template
@@ -42,7 +29,7 @@ File Descriptions
 
 - README.md
 
-Instructions
+# Instructions
 
 Run the following commands in the project's root directory to set up database and model:
 
